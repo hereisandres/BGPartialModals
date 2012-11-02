@@ -62,7 +62,7 @@ Feel free to contribute or suggest any code.
 ```
 
 ### Animation Options
-Currently there are three available options to choose from: **BGPartialModalAnimationNone**, ** BGPartialModalAnimationFade**, and **BGPartialModalAnimationBounce**.
+Currently there are three available options to choose from: **BGPartialModalAnimationNone**, **BGPartialModalAnimationFade**, and **BGPartialModalAnimationBounce**.
 
 ## TODO
 1. Add more animations
