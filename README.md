@@ -50,7 +50,8 @@ Feel free to contribute or suggest any code.
                          // some completion stuff here
                      }];
 }
-
+```
+``` objective-c
 - (void)willClosePartialModal:(BGPartialModalViewController *)partialModal
 {
     // dismiss modal with animation
