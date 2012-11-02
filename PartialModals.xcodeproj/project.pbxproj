@@ -1,0 +1,364 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		20D56CCE164379CE00F3E024 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20D56CCD164379CE00F3E024 /* UIKit.framework */; };
+		20D56CD0164379CE00F3E024 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20D56CCF164379CE00F3E024 /* Foundation.framework */; };
+		20D56CD2164379CE00F3E024 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20D56CD1164379CE00F3E024 /* CoreGraphics.framework */; };
+		20D56CD8164379CE00F3E024 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20D56CD6164379CE00F3E024 /* InfoPlist.strings */; };
+		20D56CDA164379CE00F3E024 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D56CD9164379CE00F3E024 /* main.m */; };
+		20D56CDE164379CE00F3E024 /* BGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D56CDD164379CE00F3E024 /* BGAppDelegate.m */; };
+		20D56CE0164379CE00F3E024 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D56CDF164379CE00F3E024 /* Default.png */; };
+		20D56CE2164379CE00F3E024 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D56CE1164379CE00F3E024 /* Default@2x.png */; };
+		20D56CE4164379CE00F3E024 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D56CE3164379CE00F3E024 /* Default-568h@2x.png */; };
+		20D56CE7164379CE00F3E024 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20D56CE5164379CE00F3E024 /* MainStoryboard_iPhone.storyboard */; };
+		20D56CEA164379CE00F3E024 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20D56CE8164379CE00F3E024 /* MainStoryboard_iPad.storyboard */; };
+		20D56CED164379CE00F3E024 /* BGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D56CEC164379CE00F3E024 /* BGViewController.m */; };
+		20D56CF616437A1C00F3E024 /* UIViewController+PartialModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D56CF516437A1C00F3E024 /* UIViewController+PartialModal.m */; };
+		20D56CF916437D4400F3E024 /* BGPartialModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D56CF816437D4400F3E024 /* BGPartialModalViewController.m */; };
+		20D56D01164383FD00F3E024 /* BGMyModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D56CFF164383FD00F3E024 /* BGMyModalViewController.m */; };
+		20D56D02164383FD00F3E024 /* BGMyModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20D56D00164383FD00F3E024 /* BGMyModalViewController.xib */; };
+		20D56D0616439B4100F3E024 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20D56D0516439B4100F3E024 /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		20D56CC9164379CE00F3E024 /* PartialModals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartialModals.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		20D56CCD164379CE00F3E024 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		20D56CCF164379CE00F3E024 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		20D56CD1164379CE00F3E024 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		20D56CD5164379CE00F3E024 /* PartialModals-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PartialModals-Info.plist"; sourceTree = "<group>"; };
+		20D56CD7164379CE00F3E024 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		20D56CD9164379CE00F3E024 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		20D56CDB164379CE00F3E024 /* PartialModals-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PartialModals-Prefix.pch"; sourceTree = "<group>"; };
+		20D56CDC164379CE00F3E024 /* BGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BGAppDelegate.h; sourceTree = "<group>"; };
+		20D56CDD164379CE00F3E024 /* BGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BGAppDelegate.m; sourceTree = "<group>"; };
+		20D56CDF164379CE00F3E024 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		20D56CE1164379CE00F3E024 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		20D56CE3164379CE00F3E024 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		20D56CE6164379CE00F3E024 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		20D56CE9164379CE00F3E024 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		20D56CEB164379CE00F3E024 /* BGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BGViewController.h; sourceTree = "<group>"; };
+		20D56CEC164379CE00F3E024 /* BGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BGViewController.m; sourceTree = "<group>"; };
+		20D56CF416437A1C00F3E024 /* UIViewController+PartialModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PartialModal.h"; sourceTree = "<group>"; };
+		20D56CF516437A1C00F3E024 /* UIViewController+PartialModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PartialModal.m"; sourceTree = "<group>"; };
+		20D56CF716437D4400F3E024 /* BGPartialModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGPartialModalViewController.h; sourceTree = "<group>"; };
+		20D56CF816437D4400F3E024 /* BGPartialModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGPartialModalViewController.m; sourceTree = "<group>"; };
+		20D56CFE164383FD00F3E024 /* BGMyModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGMyModalViewController.h; sourceTree = "<group>"; };
+		20D56CFF164383FD00F3E024 /* BGMyModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGMyModalViewController.m; sourceTree = "<group>"; };
+		20D56D00164383FD00F3E024 /* BGMyModalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BGMyModalViewController.xib; sourceTree = "<group>"; };
+		20D56D0516439B4100F3E024 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		20D56CC6164379CE00F3E024 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20D56D0616439B4100F3E024 /* QuartzCore.framework in Frameworks */,
+				20D56CCE164379CE00F3E024 /* UIKit.framework in Frameworks */,
+				20D56CD0164379CE00F3E024 /* Foundation.framework in Frameworks */,
+				20D56CD2164379CE00F3E024 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		20D56CBE164379CE00F3E024 = {
+			isa = PBXGroup;
+			children = (
+				20D56CD3164379CE00F3E024 /* PartialModals */,
+				20D56CCC164379CE00F3E024 /* Frameworks */,
+				20D56CCA164379CE00F3E024 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		20D56CCA164379CE00F3E024 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				20D56CC9164379CE00F3E024 /* PartialModals.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20D56CCC164379CE00F3E024 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20D56D0516439B4100F3E024 /* QuartzCore.framework */,
+				20D56CCD164379CE00F3E024 /* UIKit.framework */,
+				20D56CCF164379CE00F3E024 /* Foundation.framework */,
+				20D56CD1164379CE00F3E024 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		20D56CD3164379CE00F3E024 /* PartialModals */ = {
+			isa = PBXGroup;
+			children = (
+				20D56D0416438F7800F3E024 /* Interface */,
+				20D56D0316438F6600F3E024 /* ViewControllers */,
+				20D56CFA16437F2E00F3E024 /* PartialModalClasses */,
+				20D56CDC164379CE00F3E024 /* BGAppDelegate.h */,
+				20D56CDD164379CE00F3E024 /* BGAppDelegate.m */,
+				20D56CD4164379CE00F3E024 /* Supporting Files */,
+			);
+			path = PartialModals;
+			sourceTree = "<group>";
+		};
+		20D56CD4164379CE00F3E024 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				20D56CD5164379CE00F3E024 /* PartialModals-Info.plist */,
+				20D56CD6164379CE00F3E024 /* InfoPlist.strings */,
+				20D56CD9164379CE00F3E024 /* main.m */,
+				20D56CDB164379CE00F3E024 /* PartialModals-Prefix.pch */,
+				20D56CDF164379CE00F3E024 /* Default.png */,
+				20D56CE1164379CE00F3E024 /* Default@2x.png */,
+				20D56CE3164379CE00F3E024 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		20D56CFA16437F2E00F3E024 /* PartialModalClasses */ = {
+			isa = PBXGroup;
+			children = (
+				20D56CF416437A1C00F3E024 /* UIViewController+PartialModal.h */,
+				20D56CF516437A1C00F3E024 /* UIViewController+PartialModal.m */,
+				20D56CF716437D4400F3E024 /* BGPartialModalViewController.h */,
+				20D56CF816437D4400F3E024 /* BGPartialModalViewController.m */,
+			);
+			name = PartialModalClasses;
+			sourceTree = "<group>";
+		};
+		20D56D0316438F6600F3E024 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				20D56CEB164379CE00F3E024 /* BGViewController.h */,
+				20D56CEC164379CE00F3E024 /* BGViewController.m */,
+				20D56CFE164383FD00F3E024 /* BGMyModalViewController.h */,
+				20D56CFF164383FD00F3E024 /* BGMyModalViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		20D56D0416438F7800F3E024 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				20D56D00164383FD00F3E024 /* BGMyModalViewController.xib */,
+				20D56CE5164379CE00F3E024 /* MainStoryboard_iPhone.storyboard */,
+				20D56CE8164379CE00F3E024 /* MainStoryboard_iPad.storyboard */,
+			);
+			name = Interface;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		20D56CC8164379CE00F3E024 /* PartialModals */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20D56CF0164379CE00F3E024 /* Build configuration list for PBXNativeTarget "PartialModals" */;
+			buildPhases = (
+				20D56CC5164379CE00F3E024 /* Sources */,
+				20D56CC6164379CE00F3E024 /* Frameworks */,
+				20D56CC7164379CE00F3E024 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PartialModals;
+			productName = PartialModals;
+			productReference = 20D56CC9164379CE00F3E024 /* PartialModals.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20D56CC0164379CE00F3E024 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BG;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Bolted Games";
+			};
+			buildConfigurationList = 20D56CC3164379CE00F3E024 /* Build configuration list for PBXProject "PartialModals" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 20D56CBE164379CE00F3E024;
+			productRefGroup = 20D56CCA164379CE00F3E024 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				20D56CC8164379CE00F3E024 /* PartialModals */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		20D56CC7164379CE00F3E024 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20D56CD8164379CE00F3E024 /* InfoPlist.strings in Resources */,
+				20D56CE0164379CE00F3E024 /* Default.png in Resources */,
+				20D56CE2164379CE00F3E024 /* Default@2x.png in Resources */,
+				20D56CE4164379CE00F3E024 /* Default-568h@2x.png in Resources */,
+				20D56CE7164379CE00F3E024 /* MainStoryboard_iPhone.storyboard in Resources */,
+				20D56CEA164379CE00F3E024 /* MainStoryboard_iPad.storyboard in Resources */,
+				20D56D02164383FD00F3E024 /* BGMyModalViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		20D56CC5164379CE00F3E024 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20D56CDA164379CE00F3E024 /* main.m in Sources */,
+				20D56CDE164379CE00F3E024 /* BGAppDelegate.m in Sources */,
+				20D56CED164379CE00F3E024 /* BGViewController.m in Sources */,
+				20D56CF616437A1C00F3E024 /* UIViewController+PartialModal.m in Sources */,
+				20D56CF916437D4400F3E024 /* BGPartialModalViewController.m in Sources */,
+				20D56D01164383FD00F3E024 /* BGMyModalViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		20D56CD6164379CE00F3E024 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20D56CD7164379CE00F3E024 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		20D56CE5164379CE00F3E024 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20D56CE6164379CE00F3E024 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		20D56CE8164379CE00F3E024 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20D56CE9164379CE00F3E024 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		20D56CEE164379CE00F3E024 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		20D56CEF164379CE00F3E024 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		20D56CF1164379CE00F3E024 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PartialModals/PartialModals-Prefix.pch";
+				INFOPLIST_FILE = "PartialModals/PartialModals-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		20D56CF2164379CE00F3E024 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PartialModals/PartialModals-Prefix.pch";
+				INFOPLIST_FILE = "PartialModals/PartialModals-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		20D56CC3164379CE00F3E024 /* Build configuration list for PBXProject "PartialModals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20D56CEE164379CE00F3E024 /* Debug */,
+				20D56CEF164379CE00F3E024 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20D56CF0164379CE00F3E024 /* Build configuration list for PBXNativeTarget "PartialModals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20D56CF1164379CE00F3E024 /* Debug */,
+				20D56CF2164379CE00F3E024 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20D56CC0164379CE00F3E024 /* Project object */;
+}
