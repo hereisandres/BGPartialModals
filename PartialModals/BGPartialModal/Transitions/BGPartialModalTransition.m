@@ -10,9 +10,6 @@
 
 @interface BGPartialModalTransition ()
 
-@property (nonatomic, strong) UIView *modalView;
-@property (nonatomic, strong) UIView *overlayView;
-
 @end
 
 @implementation BGPartialModalTransition
@@ -48,12 +45,6 @@
         _modalView = modalView;
     }
     return self;
-}
-
-- (void)initializeTransition
-{
-    self.overlayView.hidden = YES;
-    self.modalView.hidden = YES;
 }
 
 /**

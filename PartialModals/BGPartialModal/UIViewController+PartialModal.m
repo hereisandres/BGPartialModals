@@ -34,11 +34,10 @@ static BGPartialModalTransition  *_transition;
                 animationType:(Class)transitionClass
                    completion:(void (^)(void))completion
 {
-    self.transition = [[transitionClass alloc] initWithModalView:viewControllerToPresent.modalView];
+    self.transition = [[transitionClass alloc] init];
     
     // create the overlay
     [self.transition setOverlayColor:overlayColor];
-    [self.transition initializeTransition];
     [self.view addSubview:[self.transition getTheOverlayView]];
     
     [self.transition performOverlayViewAnimationInCompletion:^{
@@ -60,6 +59,7 @@ static BGPartialModalTransition  *_transition;
         
         // animate in
         [self presentViewController:viewControllerToPresent animated:NO completion:^{
+            self.transition.modalView = viewControllerToPresent.modalView;
             [self.transition performPartialModalAnimationPresent:YES Completion:completion];
         }];
     }];

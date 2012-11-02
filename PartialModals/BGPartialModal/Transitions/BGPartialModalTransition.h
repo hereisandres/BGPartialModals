@@ -18,8 +18,10 @@
 
 @property (nonatomic, weak) id<BGPartialModalTransitionDelegate> delegate;
 
+@property (nonatomic, strong) UIView *modalView;
+@property (nonatomic, strong) UIView *overlayView;
+
 - (id)initWithModalView:(UIView *)modalView;
-- (void)initializeTransition;
 - (void)performPartialModalAnimationPresent:(BOOL)flag Completion:(void (^)(void))completion;
 
 - (void)performOverlayViewAnimationInCompletion:(void (^)(void))completion;
