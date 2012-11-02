@@ -51,8 +51,6 @@ Feel free to contribute or suggest any code.
                      }];
 }
 
-#pragma mark - Partial Modal Delegate
-
 - (void)willClosePartialModal:(BGPartialModalViewController *)partialModal
 {
     // dismiss modal with animation
