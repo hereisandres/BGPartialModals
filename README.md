@@ -45,5 +45,6 @@ More transitions are needed! Feel free to contribute or suggest any code.
 ## TODO
 - Add more transitions
 - Add nice UI, and cool demo
+- Create an iPad demo
 - Write better documentaion
 - Create visual tutorial, maybe a video

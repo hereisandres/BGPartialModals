@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "BGMyModalViewController.h"
 
-@interface BGViewController : UIViewController <BGPartialModalDelegate>
+@interface BGViewController : UIViewController <BGPartialModalDelegate, UITableViewDataSource, UITableViewDelegate>
 
-- (IBAction)showModalPressed:(id)sender;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) NSArray *transitions;
 
 @end

@@ -26,7 +26,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    // add a nice shadow
+    self.modalView.layer.shadowOpacity = 0.8;
+    self.modalView.layer.shadowOffset = CGSizeMake(0, 0);
+    self.modalView.layer.masksToBounds = NO;
 }
 
 - (void)didReceiveMemoryWarning
