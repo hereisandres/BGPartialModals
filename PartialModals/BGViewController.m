@@ -7,6 +7,7 @@
 //
 
 #import "BGViewController.h"
+#import "BGPartialModalTransition.h"
 
 @interface BGViewController ()
 
@@ -37,7 +38,7 @@
     // present modal
     [self presentViewController:myModalController
                    overlayColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.5f] // overlay color with alpha
-                  animationType:BGPartialModalAnimationBounce // animation type
+                  animationType:[BGPartialModalTransition class] // animation type
                      completion:^{
                          // some completion stuff here
                      }];
@@ -48,7 +49,9 @@
 - (void)willClosePartialModal:(BGPartialModalViewController *)partialModal
 {
     // dismiss modal with animation
-    [self dismissViewController:partialModal AnimationType:BGPartialModalAnimationFade completion:^{
+    [self dismissViewController:partialModal
+                  animationType:[BGPartialModalTransition class]
+                     completion:^{
         // some completion stuff here
     }];
 }

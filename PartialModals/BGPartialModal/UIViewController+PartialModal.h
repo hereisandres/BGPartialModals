@@ -9,25 +9,19 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
-typedef void (^BGPartialModalAnimationCompletion)(void);
-
-typedef enum {
-    BGPartialModalAnimationNone = 0,
-    BGPartialModalAnimationFade,
-    BGPartialModalAnimationBounce
-} BGPartialModalAnimation;
-
-@class BGPartialModalViewController;
+@class BGPartialModalViewController, BGPartialModalTransition;
 
 @interface UIViewController (PartialModal)
 
+@property (nonatomic, strong) BGPartialModalTransition *transition;
+
 - (void)presentViewController:(BGPartialModalViewController *)viewControllerToPresent
                  overlayColor:(UIColor *)overlayColor
-                animationType:(BGPartialModalAnimation)animationType
+                animationType:(Class)transitionClass
                    completion:(void (^)(void))completion;
 
 - (void)dismissViewController:(BGPartialModalViewController *)partialModalViewController
-                AnimationType:(BGPartialModalAnimation)animationType
+                animationType:(Class)transitionClass
                    completion:(void (^)(void))completion;
 
 @end

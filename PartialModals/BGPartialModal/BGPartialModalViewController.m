@@ -43,8 +43,7 @@
     self.backgroundOverlay.userInteractionEnabled = YES;
     [self.view addSubview:self.backgroundOverlay];
     
-    self.modalView.hidden = YES;
-    [self.view addSubview:self.modalView];
+    [self.view bringSubviewToFront:self.modalView];
     
     // create the overlay tap gesture recognizer
     self.overlayCloseGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
