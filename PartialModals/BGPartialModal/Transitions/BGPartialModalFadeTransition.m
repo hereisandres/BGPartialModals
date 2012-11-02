@@ -19,14 +19,14 @@
 - (void)performInTransitionCompletion:(void (^)(void))completion
 {
     // modal in
-    self.modalView.hidden = NO;
-    self.modalView.alpha = 0.0f;
+    self.modalViewController.modalView.hidden = NO;
+    self.modalViewController.modalView.alpha = 0.0f;
     
     [UIView animateWithDuration:.2
                           delay:0
                         options:UIViewAnimationCurveEaseInOut
                      animations:^{
-                         self.modalView.alpha = 1.0f;
+                         self.modalViewController.modalView.alpha = 1.0f;
                      } completion:^(BOOL finished) {
                          completion();
                      }];
@@ -39,9 +39,9 @@
                           delay:0
                         options:UIViewAnimationCurveEaseInOut
                      animations:^{
-                         self.modalView.alpha = 0.0f;
+                         self.modalViewController.modalView.alpha = 0.0f;
                      } completion:^(BOOL finished) {
-                         self.modalView.hidden = YES;
+                         self.modalViewController.modalView.hidden = YES;
                          completion();
                      }];
 }

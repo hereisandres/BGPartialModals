@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BGPartialModalViewController.h"
 
 @protocol BGPartialModalTransitionDelegate
 
@@ -18,16 +19,13 @@
 
 @property (nonatomic, weak) id<BGPartialModalTransitionDelegate> delegate;
 
-@property (nonatomic, strong) UIView *modalView;
-@property (nonatomic, strong) UIView *overlayView;
+@property (nonatomic, weak) BGPartialModalViewController *modalViewController;
+@property (nonatomic, weak) UIViewController *rootViewController;
+@property (nonatomic, weak) UIView *overlayView;
 
-- (id)initWithModalView:(UIView *)modalView;
 - (void)performPartialModalAnimationPresent:(BOOL)flag Completion:(void (^)(void))completion;
 
 - (void)performOverlayViewAnimationInCompletion:(void (^)(void))completion;
 - (void)performOverlayViewAnimationOutCompletion:(void (^)(void))completion;
-
-- (UIView *)getTheOverlayView;
-- (void)setOverlayColor:(UIColor *)color;
 
 @end

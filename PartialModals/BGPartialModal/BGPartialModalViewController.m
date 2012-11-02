@@ -21,6 +21,7 @@
 {
     _backgroundOverlayImage = backgroundOverlayImage;
     self.backgroundOverlay.image = backgroundOverlayImage;
+    [self.backgroundOverlay sizeToFit];
 }
 
 - (void)setEnableOverlayClose:(BOOL)enableOverlayClose

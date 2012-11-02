@@ -14,39 +14,6 @@
 
 @implementation BGPartialModalTransition
 
-#pragma mark - Overlay view getters / setters
-
-- (UIView *)overlayView
-{
-    if (_overlayView == nil)
-    {
-        _overlayView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-        _overlayView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.7f];
-    }
-    return _overlayView;
-}
-
-- (UIView *)getTheOverlayView
-{
-    return self.overlayView;
-}
-
-- (void)setOverlayColor:(UIColor *)color
-{
-    self.overlayView.backgroundColor = color;
-}
-
-#pragma mark - init methods
-
-- (id)initWithModalView:(UIView *)modalView
-{
-    self = [super init];
-    if (self) {
-        _modalView = modalView;
-    }
-    return self;
-}
-
 /**
  * Delegate between in and out animations.
  */
@@ -67,14 +34,14 @@
 - (void)performInTransitionCompletion:(void (^)(void))completion
 {
     // modal in
-    self.modalView.hidden = NO;
+    self.modalViewController.modalView.hidden = NO;
     completion();
 }
 
 - (void)performOutTransitionCompletion:(void (^)(void))completion
 {
     // modal out
-    self.modalView.hidden = YES;
+    self.modalViewController.modalView.hidden = YES;
     completion();
 }
 

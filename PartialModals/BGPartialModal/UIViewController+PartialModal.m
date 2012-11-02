@@ -35,10 +35,13 @@ static BGPartialModalTransition  *_transition;
                    completion:(void (^)(void))completion
 {
     self.transition = [[transitionClass alloc] init];
+    self.transition.rootViewController = self;
     
     // create the overlay
-    [self.transition setOverlayColor:overlayColor];
-    [self.view addSubview:[self.transition getTheOverlayView]];
+    UIView *overlayView = [[UIView alloc] initWithFrame:self.view.bounds];
+    overlayView.backgroundColor = overlayColor;
+    self.transition.overlayView = overlayView;
+    [self.view addSubview:self.transition.overlayView];
     
     [self.transition performOverlayViewAnimationInCompletion:^{
         // capture an image of bg.
@@ -59,7 +62,7 @@ static BGPartialModalTransition  *_transition;
         
         // animate in
         [self presentViewController:viewControllerToPresent animated:NO completion:^{
-            self.transition.modalView = viewControllerToPresent.modalView;
+            self.transition.modalViewController = viewControllerToPresent;
             [self.transition performPartialModalAnimationPresent:YES Completion:completion];
         }];
     }];
@@ -75,8 +78,38 @@ static BGPartialModalTransition  *_transition;
     [self.transition performPartialModalAnimationPresent:NO Completion:^{
         [self dismissViewControllerAnimated:NO completion:^{
             [self.transition performOverlayViewAnimationOutCompletion:completion];
+            self.transition = nil;
         }];
     }];
+}
+
+#pragma mark - Orientation change
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    // TODO: revise this code
+    if (self.transition) {
+        self.transition.overlayView.frame = self.view.bounds;
+        [self.transition.rootViewController dismissViewControllerAnimated:NO completion:^{
+            // capture an image of bg.
+            // This method is used because it will help use the SDKs presentVC methods
+            // TODO: test for performance, maybe move to new thread
+            if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)]) {
+                UIGraphicsBeginImageContextWithOptions([self.transition.rootViewController.view bounds].size, NO, [[UIScreen mainScreen] scale]);
+            } else {
+                UIGraphicsBeginImageContext([self.transition.rootViewController.view bounds].size);
+            }
+            
+            [self.transition.rootViewController.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+            UIImage *overlayImage = UIGraphicsGetImageFromCurrentImageContext();
+            UIGraphicsEndImageContext();
+            
+            // prepare and present modal view controller
+            self.transition.modalViewController.backgroundOverlayImage = overlayImage;
+            
+            [self.transition.rootViewController presentViewController:self.transition.modalViewController animated:NO completion:nil];
+        }];
+    }
 }
 
 @end
