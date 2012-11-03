@@ -24,5 +24,6 @@
 @property (nonatomic, strong) UIImage *backgroundOverlayImage;
 @property (nonatomic, strong) IBOutlet UIView *modalView;
 @property (nonatomic) BOOL enableOverlayClose;
+@property (nonatomic) CGFloat backgroundOverlayOffset;
 
 @end

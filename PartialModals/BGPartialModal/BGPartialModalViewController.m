@@ -42,6 +42,11 @@
     // add pseudo modal views
     self.backgroundOverlay = [[UIImageView alloc] initWithImage:self.backgroundOverlayImage];
     self.backgroundOverlay.userInteractionEnabled = YES;
+    
+    // ensure that there is not extra status bar space on top
+    self.backgroundOverlay.frame = CGRectMake(0, self.backgroundOverlayOffset, self.backgroundOverlayImage.size.width, self.backgroundOverlayImage.size.height);
+    
+    // add the overlay
     [self.view addSubview:self.backgroundOverlay];
     
     [self.view bringSubviewToFront:self.modalView];

@@ -38,24 +38,30 @@ static BGPartialModalTransition  *_transition;
     self.transition.rootViewController = self;
     
     // create the overlay
-    UIView *overlayView = [[UIView alloc] initWithFrame:self.view.bounds];
+    // get correct bounds
+    CGRect overlayFrame = self.view.bounds;
+    if (self.navigationController) {
+        overlayFrame = self.navigationController.view.bounds;
+        viewControllerToPresent.backgroundOverlayOffset = -20.0f; // to hide status bar
+    }
+    
+    UIView *overlayView = [[UIView alloc] initWithFrame:overlayFrame];
     overlayView.backgroundColor = overlayColor;
     self.transition.overlayView = overlayView;
-    [self.view addSubview:self.transition.overlayView];
+    
+    // make sure if a navigation controller exists to cover the nav bar
+    if (self.navigationController)
+        [self.navigationController.view addSubview:self.transition.overlayView];
+    else
+        [self.view addSubview:self.transition.overlayView];
     
     [self.transition performOverlayViewAnimationInCompletion:^{
-        // capture an image of bg.
-        // This method is used because it will help use the SDKs presentVC methods
-        // TODO: test for performance, maybe move to new thread
-        if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)]) {
-            UIGraphicsBeginImageContextWithOptions([self.view bounds].size, NO, [[UIScreen mainScreen] scale]);
-        } else {
-            UIGraphicsBeginImageContext([self.view bounds].size);
-        }
-        
-        [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
-        UIImage *overlayImage = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
+        // determine if the there is a navigation bar
+        UIImage *overlayImage;
+        if (self.navigationController)
+            overlayImage = [self captureImageFromViewController:self.navigationController];
+        else
+            overlayImage = [self captureImageFromViewController:self];
         
         // prepare and present modal view controller
         viewControllerToPresent.backgroundOverlayImage = overlayImage;
@@ -110,6 +116,26 @@ static BGPartialModalTransition  *_transition;
             [self.transition.rootViewController presentViewController:self.transition.modalViewController animated:NO completion:nil];
         }];
     }
+}
+
+#pragma mark - Helpers
+
+- (UIImage *)captureImageFromViewController:(UIViewController *)viewController
+{
+    // capture an image of bg.
+    // This method is used because it will help use the SDKs presentVC methods
+    // TODO: test for performance, maybe move to new thread
+    if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)]) {
+        UIGraphicsBeginImageContextWithOptions([viewController.view bounds].size, NO, [[UIScreen mainScreen] scale]);
+    } else {
+        UIGraphicsBeginImageContext([viewController.view bounds].size);
+    }
+    
+    [viewController.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
 }
 
 @end
