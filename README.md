@@ -1,7 +1,7 @@
-We have all been in situations where designers think an app should behave as a website does. Especially, when you see designs with bunch of modals. BGPartialModals to the rescue! BGPartialModals makes presenting a web like modals easy for iOS.
+We have all been in situations where designers think an app should behave as a website does. Especially, when you see designs with a bunch of modals. BGPartialModals to the rescue! BGPartialModals makes presenting web-like modals easy for iOS.
 
 ## Get Started
-[Download](https://github.com/lopeza511/BGPartialModals/zipball/master) the files and run the demo App and check out the source code. Check out the [docs](https://github.com/lopeza511/BGPartialModals/wiki).
+[Download](https://github.com/lopeza511/BGPartialModals/zipball/master) the files and run the demo app and check out the source code. Check out the [docs](https://github.com/lopeza511/BGPartialModals/wiki).
 
 ### Requirements
 - iOS 4.3+
