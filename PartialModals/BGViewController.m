@@ -8,6 +8,7 @@
 
 #import "BGViewController.h"
 #import "BGPartialModalFadeTransition.h"
+#import "BGPartialModalSlideUnderTransition.h"
 
 @interface BGViewController ()
 
@@ -22,6 +23,7 @@
     self.transitions = [NSArray arrayWithObjects:
                         [NSDictionary dictionaryWithObjectsAndKeys:@"No Transition", @"title", [BGPartialModalTransition class], @"transitionClass", nil],
                         [NSDictionary dictionaryWithObjectsAndKeys:@"Fade Transition", @"title", [BGPartialModalFadeTransition class], @"transitionClass", nil],
+                        [NSDictionary dictionaryWithObjectsAndKeys:@"Slide Transition", @"title", [BGPartialModalSlideUnderTransition class], @"transitionClass", nil],
                         nil];
 }
 

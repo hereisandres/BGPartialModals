@@ -26,4 +26,6 @@
 @property (nonatomic) BOOL enableOverlayClose;
 @property (nonatomic) CGFloat backgroundOverlayOffset;
 
+- (UIImageView *)backgroundOverlay;
+
 @end

@@ -17,6 +17,11 @@
 
 @implementation BGPartialModalViewController
 
+- (UIImageView *)backgroundOverlay
+{
+    return _backgroundOverlay;
+}
+
 - (void)setBackgroundOverlayImage:(UIImage *)backgroundOverlayImage
 {
     _backgroundOverlayImage = backgroundOverlayImage;
@@ -49,7 +54,7 @@
     // add the overlay
     [self.view addSubview:self.backgroundOverlay];
     
-    [self.view bringSubviewToFront:self.modalView];
+    [self.view sendSubviewToBack:self.backgroundOverlay];
     
     // create the overlay tap gesture recognizer
     self.overlayCloseGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self

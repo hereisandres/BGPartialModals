@@ -26,6 +26,7 @@
 		4101D9E21644470E009AC313 /* BGPartialModalTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 4101D9DE1644470E009AC313 /* BGPartialModalTransition.m */; };
 		4101D9E31644470E009AC313 /* UIViewController+PartialModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 4101D9E01644470E009AC313 /* UIViewController+PartialModal.m */; };
 		4101D9E61644473D009AC313 /* BGPartialModalFadeTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 4101D9E51644473D009AC313 /* BGPartialModalFadeTransition.m */; };
+		414DB8AC16541F660067AE63 /* BGPartialModalSlideUnderTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 414DB8AB16541F660067AE63 /* BGPartialModalSlideUnderTransition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,8 @@
 		4101D9E01644470E009AC313 /* UIViewController+PartialModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PartialModal.m"; sourceTree = "<group>"; };
 		4101D9E41644473D009AC313 /* BGPartialModalFadeTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGPartialModalFadeTransition.h; sourceTree = "<group>"; };
 		4101D9E51644473D009AC313 /* BGPartialModalFadeTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGPartialModalFadeTransition.m; sourceTree = "<group>"; };
+		414DB8AA16541F660067AE63 /* BGPartialModalSlideUnderTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGPartialModalSlideUnderTransition.h; sourceTree = "<group>"; };
+		414DB8AB16541F660067AE63 /* BGPartialModalSlideUnderTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGPartialModalSlideUnderTransition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +173,8 @@
 				4101D9DE1644470E009AC313 /* BGPartialModalTransition.m */,
 				4101D9E41644473D009AC313 /* BGPartialModalFadeTransition.h */,
 				4101D9E51644473D009AC313 /* BGPartialModalFadeTransition.m */,
+				414DB8AA16541F660067AE63 /* BGPartialModalSlideUnderTransition.h */,
+				414DB8AB16541F660067AE63 /* BGPartialModalSlideUnderTransition.m */,
 			);
 			path = Transitions;
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 				4101D9E21644470E009AC313 /* BGPartialModalTransition.m in Sources */,
 				4101D9E31644470E009AC313 /* UIViewController+PartialModal.m in Sources */,
 				4101D9E61644473D009AC313 /* BGPartialModalFadeTransition.m in Sources */,
+				414DB8AC16541F660067AE63 /* BGPartialModalSlideUnderTransition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
