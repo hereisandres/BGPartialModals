@@ -40,6 +40,14 @@
         [self.backgroundOverlay removeGestureRecognizer:self.overlayCloseGestureRecognizer];
 }
 
+- (UITapGestureRecognizer *)overlayCloseGestureRecognizer
+{
+    if (_overlayCloseGestureRecognizer == nil)
+        return [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeModal:)];
+    
+    return _overlayCloseGestureRecognizer;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -56,9 +64,6 @@
     
     [self.view sendSubviewToBack:self.backgroundOverlay];
     
-    // create the overlay tap gesture recognizer
-    self.overlayCloseGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                                 action:@selector(closeModal:)];
     if (self.enableOverlayClose)
         [self.backgroundOverlay addGestureRecognizer:self.overlayCloseGestureRecognizer];
 }

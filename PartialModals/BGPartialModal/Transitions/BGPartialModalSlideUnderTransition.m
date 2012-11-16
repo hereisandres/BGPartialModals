@@ -16,13 +16,6 @@
 
 @implementation BGPartialModalSlideUnderTransition
 
-- (CGFloat)slideWith
-{
-    if (_slideWith < 1)
-        return 160.0f;
-    return _slideWith;
-}
-
 #pragma mark - Perform animations
 /**
  * Override these methods in your custom transtion subclasses.
@@ -47,12 +40,14 @@
 
 - (void)performOutTransitionCompletion:(void (^)(void))completion
 {
+    _rootFrame = [self.modalViewController backgroundOverlay].frame;
+    
     // modal out
     [UIView animateWithDuration:.2
                           delay:0
                         options:UIViewAnimationCurveEaseInOut
                      animations:^{
-                         [self.modalViewController backgroundOverlay].frame = _rootFrame;
+                         [self.modalViewController backgroundOverlay].frame = CGRectMake(_rootFrame.origin.x + self.slideWith, _rootFrame.origin.y, _rootFrame.size.width, _rootFrame.size.height);;
                      } completion:^(BOOL finished) {
                          completion();
                      }];

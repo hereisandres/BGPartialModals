@@ -17,11 +17,11 @@
 
 - (void)presentViewController:(BGPartialModalViewController *)viewControllerToPresent
                  overlayColor:(UIColor *)overlayColor
-                animationType:(Class)transitionClass
+                animationType:(BGPartialModalTransition *)transition
                    completion:(void (^)(void))completion;
 
 - (void)dismissViewController:(BGPartialModalViewController *)partialModalViewController
-                animationType:(Class)transitionClass
+                animationType:(BGPartialModalTransition *)transition
                    completion:(void (^)(void))completion;
 
 @end

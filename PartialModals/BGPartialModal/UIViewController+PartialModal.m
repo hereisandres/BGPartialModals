@@ -31,10 +31,10 @@ static BGPartialModalTransition  *_transition;
 
 - (void)presentViewController:(BGPartialModalViewController *)viewControllerToPresent
                  overlayColor:(UIColor *)overlayColor
-                animationType:(Class)transitionClass
+                animationType:(BGPartialModalTransition *)transition
                    completion:(void (^)(void))completion
 {
-    self.transition = [[transitionClass alloc] init];
+    self.transition = transition;
     self.transition.rootViewController = self;
     
     // create the overlay
@@ -77,9 +77,15 @@ static BGPartialModalTransition  *_transition;
 #pragma mark - Dismiss
 
 - (void)dismissViewController:(BGPartialModalViewController *)partialModalViewController
-                animationType:(Class)transitionClass
+                animationType:(BGPartialModalTransition *)transition
                    completion:(void (^)(void))completion
 {
+    UIView *overlayView = self.transition.overlayView;
+    self.transition = transition;
+    self.transition.rootViewController = self;
+    self.transition.modalViewController = partialModalViewController;
+    self.transition.overlayView = overlayView;
+    
     // animate out
     [self.transition performPartialModalAnimationPresent:NO Completion:^{
         [self dismissViewControllerAnimated:NO completion:^{
